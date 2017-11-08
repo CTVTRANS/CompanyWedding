@@ -14,7 +14,6 @@ class Extension: NSObject {
 }
 
 extension UIAlertController {
-    
     static func showAlertWith(title: String, message: String, in viewController: UIViewController) {
         let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
