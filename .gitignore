@@ -1,0 +1,6 @@
+.DS_Store
+Pod/
+*.xcworkspace
+Podfile.lock
+Carthage/Build
+
