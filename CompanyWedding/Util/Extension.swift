@@ -9,7 +9,7 @@
 import UIKit
 import DeviceKit
 
-class Extension: NSObject {
+class Extension {
 
 }
 
