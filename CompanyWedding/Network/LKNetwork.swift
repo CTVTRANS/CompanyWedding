@@ -82,6 +82,7 @@ class LKNetwork: NSObject {
             request = URLRequest(url: URL(string: url + params)!)
         }
         request?.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request?.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Accept")
         setUpTimeOut()
         
         let task = session.dataTask(with: request!) { (data, _, error) in
@@ -91,10 +92,11 @@ class LKNetwork: NSObject {
                     return
                 }
                 let json = JSON(data: data!)
-                let error = json["ErrCode"].int
-                let error1 = json["RtnCode"].int
-                if error == -1 || error1 == -1 {
+                let error = json["ErrCode"].string
+                let error1 = json["RtnCode"].string
+                if error == "-1" || error1 == "-1" {
                     failure(json["ErrMsg"].string!)
+                    return
                 }
                 sucess(self.dataWithResponse(json))
             }

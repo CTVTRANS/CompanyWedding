@@ -20,8 +20,13 @@ class LoginController: BaseViewController, MainStoryboard {
     }
 
     @IBAction func pressedLogin(_ sender: Any) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController") as? SWRevealViewController {
-            self.present(vc, animated: false, completion: nil)
+        if let username = userName.text, let pass = password.text {
+            let login = LoginTask(username: username, password: pass)
+            requestWith(task: login, success: { (_) in
+                if let vc = self.storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController") as? SWRevealViewController {
+                    self.present(vc, animated: false, completion: nil)
+                }
+            })
         }
     }
 }

@@ -43,6 +43,14 @@ class BaseViewController: UIViewController {
         }
     }
     
+    func shared() {
+        let textShare = "hello hello"
+        let linkShare = "https://www.google.com.vn"
+        let shareObject = [textShare, linkShare] as? [Any]
+        let activity = UIActivityViewController(activityItems: shareObject!, applicationActivities: nil)
+        self.present(activity, animated: true, completion: nil)
+    }
+    
     func openManagerCompany() {
         UIApplication.shared.openURL(URL(string: baseURL + manager)!)
     }

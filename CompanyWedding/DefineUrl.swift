@@ -10,6 +10,8 @@ import UIKit
 
 let baseURL = "http://www.freewed.com.tw"
 
+let loginURL = "/api/GetFactoryInfo.aspx?"
+
 let companyInfo = "/app/fac.aspx?ACCT=starera"
 let seatLink = "/app/fac.aspx?ACT=admin&ACCT=freewed#TableDoc"
 let seatMemberUpload = "/app/fac.aspx?ACT=admin&ACCT=freewed#WedStepDoc"
