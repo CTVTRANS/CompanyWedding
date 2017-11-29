@@ -78,9 +78,7 @@ class MainViewController: BaseViewController, MainStoryboard {
     }
     
     @IBAction func pressedSendMessageToMember(_ sender: Any) {
-        let notice = Notice.getNotice()
-        notice.numberMessage = 0
-        Notice.saveNotice(noice: notice)
+        openMessageView()
     }
     
     @IBAction func pressedOpenWebSeat(_ sender: Any) {
@@ -112,7 +110,10 @@ class MainViewController: BaseViewController, MainStoryboard {
         shared()
     }
     
-    @IBAction func pressedSendMessage(_ sender: Any) {
-        
+    @IBAction func pressedQAOnline(_ sender: Any) {
+        openQA()
+        let notice = Notice.getNotice()
+        notice.numberSeat = 0
+        Notice.saveNotice(noice: notice)
     }
 }

@@ -42,7 +42,13 @@ class BaseViewController: UIViewController {
             UIAlertController.showAlertWith(title: "", message: error, in: self)
         }
     }
-    
+    func openMessageView() {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "MessageViewController") as? MessageViewController {
+            let navigationVC = swVC?.frontViewController as? UINavigationController
+            navigationVC?.pushViewController(vc, animated: false)
+            swVC?.pushFrontViewController(navigationVC, animated: true)
+        }
+    }
     func shared() {
         let textShare = "hello hello"
         let linkShare = "https://www.google.com.vn"
@@ -65,6 +71,10 @@ class BaseViewController: UIViewController {
     
     func openSeat() {
         UIApplication.shared.openURL(URL(string: baseURL + seatLink)!)
+    }
+    
+    func openQA() {
+        UIApplication.shared.openURL(URL(string: baseURL + questionURL)!)
     }
     
     func openCompanyInfo() {

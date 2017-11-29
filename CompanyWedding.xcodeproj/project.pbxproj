@@ -10,9 +10,6 @@
 		9D0ACB931FBACCF000A50AB1 /* LoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0ACB921FBACCF000A50AB1 /* LoginTask.swift */; };
 		9D0ACB961FBAD0FF00A50AB1 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0ACB951FBAD0FF00A50AB1 /* Company.swift */; };
 		9D1F2AEB1FB4000D003D83AC /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1F2AEA1FB4000D003D83AC /* StoryboardHelper.swift */; };
-		9D1F2AEF1FB40AF5003D83AC /* Calibri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F2AEC1FB40AF1003D83AC /* Calibri.ttf */; };
-		9D1F2AF01FB40AF5003D83AC /* Calibri Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F2AED1FB40AF2003D83AC /* Calibri Bold.ttf */; };
-		9D1F2AF11FB40AF5003D83AC /* Calibri Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1F2AEE1FB40AF3003D83AC /* Calibri Italic.ttf */; };
 		9D299F421FB3EA1700A694B0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D299F411FB3EA1700A694B0 /* LoginController.swift */; };
 		9D299F441FB3F0BA00A694B0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D299F431FB3F0BA00A694B0 /* MainViewController.swift */; };
 		9D299F461FB3F7D300A694B0 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D299F451FB3F7D300A694B0 /* LeftMenuViewController.swift */; };
@@ -26,6 +23,8 @@
 		9DB410421FB2FD460017A7D8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB410411FB2FD460017A7D8 /* BaseViewController.swift */; };
 		9DB410441FB2FE0C0017A7D8 /* DefineUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB410431FB2FE0C0017A7D8 /* DefineUrl.swift */; };
 		9DB410461FB3004B0017A7D8 /* LKCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB410451FB3004B0017A7D8 /* LKCrypto.swift */; };
+		9DFCE0031FBE7E9E007188AB /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFCE0021FBE7E9E007188AB /* MessageViewController.swift */; };
+		9DFCE0051FBE7FB8007188AB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFCE0041FBE7FB8007188AB /* Message.swift */; };
 		C8E3EDFA21EDD7782C60D5B9 /* Pods_CompanyWedding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324CD5231FDF2F3FEA88C9D8 /* Pods_CompanyWedding.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,9 +35,6 @@
 		9D0ACB921FBACCF000A50AB1 /* LoginTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTask.swift; sourceTree = "<group>"; };
 		9D0ACB951FBAD0FF00A50AB1 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		9D1F2AEA1FB4000D003D83AC /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
-		9D1F2AEC1FB40AF1003D83AC /* Calibri.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Calibri.ttf; sourceTree = "<group>"; };
-		9D1F2AED1FB40AF2003D83AC /* Calibri Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Calibri Bold.ttf"; sourceTree = "<group>"; };
-		9D1F2AEE1FB40AF3003D83AC /* Calibri Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Calibri Italic.ttf"; sourceTree = "<group>"; };
 		9D299F411FB3EA1700A694B0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		9D299F431FB3F0BA00A694B0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9D299F451FB3F7D300A694B0 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +51,8 @@
 		9DB410431FB2FE0C0017A7D8 /* DefineUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefineUrl.swift; sourceTree = "<group>"; };
 		9DB410451FB3004B0017A7D8 /* LKCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LKCrypto.swift; sourceTree = "<group>"; };
 		9DB410471FB3010E0017A7D8 /* CompanyWedding-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CompanyWedding-Bridging-Header.h"; sourceTree = "<group>"; };
+		9DFCE0021FBE7E9E007188AB /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		9DFCE0041FBE7FB8007188AB /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +89,7 @@
 			children = (
 				9D0ACB951FBAD0FF00A50AB1 /* Company.swift */,
 				9D4660971FBAE518007A8D1E /* Notice.swift */,
+				9DFCE0041FBE7FB8007188AB /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,6 +101,7 @@
 				9D299F411FB3EA1700A694B0 /* LoginController.swift */,
 				9D299F431FB3F0BA00A694B0 /* MainViewController.swift */,
 				9D299F451FB3F7D300A694B0 /* LeftMenuViewController.swift */,
+				9DFCE0021FBE7E9E007188AB /* MessageViewController.swift */,
 			);
 			path = Comtroller;
 			sourceTree = "<group>";
@@ -148,9 +148,6 @@
 				9DB4103A1FB2F69B0017A7D8 /* Extension.swift */,
 				9DB410451FB3004B0017A7D8 /* LKCrypto.swift */,
 				9DB410311FB2F5D90017A7D8 /* LaunchScreen.storyboard */,
-				9D1F2AED1FB40AF2003D83AC /* Calibri Bold.ttf */,
-				9D1F2AEE1FB40AF3003D83AC /* Calibri Italic.ttf */,
-				9D1F2AEC1FB40AF1003D83AC /* Calibri.ttf */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -227,12 +224,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D1F2AF01FB40AF5003D83AC /* Calibri Bold.ttf in Resources */,
-				9D1F2AF11FB40AF5003D83AC /* Calibri Italic.ttf in Resources */,
 				9DB410331FB2F5D90017A7D8 /* LaunchScreen.storyboard in Resources */,
 				9DB410301FB2F5D90017A7D8 /* Assets.xcassets in Resources */,
 				9DB4102E1FB2F5D90017A7D8 /* Main.storyboard in Resources */,
-				9D1F2AEF1FB40AF5003D83AC /* Calibri.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,11 +317,13 @@
 				9DB4103B1FB2F69B0017A7D8 /* Extension.swift in Sources */,
 				9DB410441FB2FE0C0017A7D8 /* DefineUrl.swift in Sources */,
 				9DB410461FB3004B0017A7D8 /* LKCrypto.swift in Sources */,
+				9DFCE0031FBE7E9E007188AB /* MessageViewController.swift in Sources */,
 				9DB410291FB2F5D90017A7D8 /* AppDelegate.swift in Sources */,
 				9D299F461FB3F7D300A694B0 /* LeftMenuViewController.swift in Sources */,
 				9DB410401FB2FD230017A7D8 /* LKNetwork.swift in Sources */,
 				9D299F421FB3EA1700A694B0 /* LoginController.swift in Sources */,
 				9D1F2AEB1FB4000D003D83AC /* StoryboardHelper.swift in Sources */,
+				9DFCE0051FBE7FB8007188AB /* Message.swift in Sources */,
 				9D299F441FB3F0BA00A694B0 /* MainViewController.swift in Sources */,
 				9D0ACB961FBAD0FF00A50AB1 /* Company.swift in Sources */,
 			);

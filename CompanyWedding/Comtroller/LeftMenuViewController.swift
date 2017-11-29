@@ -12,12 +12,13 @@ class LeftMenuViewController: BaseViewController {
 
     @IBOutlet weak var table: UITableView!
     let arrayMenu = ["1", "2", "3", "4", "5", "6", "7", "8"]
+    let notificationName = Notification.Name("refreshNotification")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         table.delegate = self
         table.dataSource = self
-        NotificationCenter.default.addObserver(self, selector: #selector(reload), name: NSNotification.Name(rawValue: "refreshNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(reload), name: NSNotification.Name(rawValue: "recivePush"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,14 +52,30 @@ extension LeftMenuViewController: UITableViewDelegate, UITableViewDataSource {
         case 1:
             shared()
         case 2:
-            break
+            openMessageView()
         case 3:
+            let notice = Notice.getNotice()
+            notice.numberSeat = 0
+            Notice.saveNotice(noice: notice)
+            NotificationCenter.default.post(name: notificationName, object: nil)
             self.openSeat()
         case 4:
+            let notice = Notice.getNotice()
+            notice.numberTerm = 0
+            Notice.saveNotice(noice: notice)
+            NotificationCenter.default.post(name: notificationName, object: nil)
             self.openMemberUpload()
         case 5:
-            break
+            let notice = Notice.getNotice()
+            notice.numberSeat = 0
+            Notice.saveNotice(noice: notice)
+            NotificationCenter.default.post(name: notificationName, object: nil)
+            openQA()
         case 6:
+            let notice = Notice.getNotice()
+            notice.numberMember = 0
+            Notice.saveNotice(noice: notice)
+            NotificationCenter.default.post(name: notificationName, object: nil)
             self.openListMember()
         case 7:
             self.openManagerCompany()

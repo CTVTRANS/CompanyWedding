@@ -17,6 +17,10 @@ let seatLink = "/app/fac.aspx?ACT=admin&ACCT=freewed#TableDoc"
 let seatMemberUpload = "/app/fac.aspx?ACT=admin&ACCT=freewed#WedStepDoc"
 let listMemberOnline = "/app/fac.aspx?ACCT=freewed"
 let manager = "/app/fac.aspx?ACT=admin&ACCT=freewed"
+let questionURL = "/app/fac.aspx?ACCT=freewed"
+
+let widthScreen = UIScreen.main.bounds.width
+let heihtSceen = UIScreen.main.bounds.height
 
 class DefineUrl: NSObject {
 
