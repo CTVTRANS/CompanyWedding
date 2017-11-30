@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fPA-xF-dIR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qOd-AX-baf">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -281,7 +281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="531" y="113"/>
+            <point key="canvasLocation" x="1325.625" y="111.97183098591549"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="DJK-qB-in9">
@@ -303,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nso-NA-lSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1322" y="113"/>
+            <point key="canvasLocation" x="2116.875" y="111.97183098591549"/>
         </scene>
         <!--Message View Controller-->
         <scene sceneID="tK2-fz-2Dd">
@@ -898,18 +898,8 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustFontToRealIPhoneSize" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFk-3H-jDf">
-                                <rect key="frame" x="70" y="124" width="91" height="16.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="14"/>
-                                <color key="textColor" red="0.41176470588235292" green="0.33333333333333331" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="adjustFontToRealIPhoneSize" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwZ-FM-MdI">
-                                <rect key="frame" x="70" y="148.5" width="91" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwZ-FM-MdI">
+                                <rect key="frame" x="70" y="135" width="91" height="16"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="13"/>
                                 <color key="textColor" red="0.41176470588235292" green="0.33333333333333331" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
@@ -954,11 +944,6 @@
                             <constraint firstAttribute="trailing" secondItem="k6q-v8-s1t" secondAttribute="trailing" constant="40" id="65b-x3-9XS"/>
                             <constraint firstItem="hr5-Pr-dOw" firstAttribute="top" secondItem="zHw-5B-L7Q" secondAttribute="bottom" id="6fn-Dd-1yi"/>
                             <constraint firstAttribute="trailing" secondItem="TIk-Ny-aNX" secondAttribute="trailing" id="6sc-id-4NV"/>
-                            <constraint firstItem="fFk-3H-jDf" firstAttribute="top" secondItem="23u-VL-qDF" secondAttribute="bottom" constant="60" id="73w-s4-OEt">
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="adjustConstantToRealIPhoneSize" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </constraint>
                             <constraint firstItem="cq7-kw-YMm" firstAttribute="top" secondItem="k1R-Ca-CSz" secondAttribute="bottom" constant="35" id="7Ki-8y-2Ym">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustConstantToRealIPhoneSize" value="YES"/>
@@ -981,17 +966,11 @@
                                 </userDefinedRuntimeAttributes>
                             </constraint>
                             <constraint firstItem="pLJ-xk-qTW" firstAttribute="leading" secondItem="tsW-Di-CC8" secondAttribute="leading" constant="40" id="JFS-v0-GqS"/>
-                            <constraint firstItem="fFk-3H-jDf" firstAttribute="left" secondItem="tsW-Di-CC8" secondAttribute="left" constant="70" id="JxT-du-eDc">
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="adjustConstantToRealIPhoneSize" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </constraint>
                             <constraint firstItem="kiT-Yt-0rg" firstAttribute="top" secondItem="fhM-3D-joe" secondAttribute="bottom" constant="16" id="LCG-zd-Zah">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustConstantToRealIPhoneSize" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
-                            <constraint firstItem="gwZ-FM-MdI" firstAttribute="top" secondItem="fFk-3H-jDf" secondAttribute="bottom" constant="8" id="MFq-GT-37m"/>
                             <constraint firstItem="k6q-v8-s1t" firstAttribute="leading" secondItem="sLb-RX-7El" secondAttribute="trailing" id="Mj0-Qv-GpA"/>
                             <constraint firstItem="16i-Nc-XvW" firstAttribute="top" secondItem="b4K-tX-geT" secondAttribute="bottom" id="Mux-90-SNt"/>
                             <constraint firstItem="pLJ-xk-qTW" firstAttribute="width" secondItem="ppq-b5-Xp6" secondAttribute="width" id="O5P-Xg-WIM"/>
@@ -1002,6 +981,7 @@
                             <constraint firstItem="Q6M-2V-mrd" firstAttribute="centerY" secondItem="fhM-3D-joe" secondAttribute="centerY" id="Qbr-QS-JVc"/>
                             <constraint firstItem="ppq-b5-Xp6" firstAttribute="leading" secondItem="pLJ-xk-qTW" secondAttribute="trailing" id="Qcm-Hu-eYt"/>
                             <constraint firstItem="J9u-PJ-c96" firstAttribute="centerY" secondItem="kiT-Yt-0rg" secondAttribute="centerY" id="UU1-t2-e3G"/>
+                            <constraint firstItem="gwZ-FM-MdI" firstAttribute="centerY" secondItem="A7M-dU-eN8" secondAttribute="centerY" id="UYG-ZS-fB4"/>
                             <constraint firstItem="b4K-tX-geT" firstAttribute="leading" secondItem="lpt-gV-bCR" secondAttribute="trailing" id="Ufn-rN-1m4"/>
                             <constraint firstItem="uwA-UO-xhw" firstAttribute="centerY" secondItem="J9u-PJ-c96" secondAttribute="centerY" id="VEW-aw-LzA"/>
                             <constraint firstItem="sLb-RX-7El" firstAttribute="left" secondItem="tsW-Di-CC8" secondAttribute="left" constant="40" id="VcJ-MJ-hYc"/>
@@ -1010,7 +990,6 @@
                             <constraint firstAttribute="trailing" secondItem="ppq-b5-Xp6" secondAttribute="trailing" constant="40" id="X7K-Hs-JpU"/>
                             <constraint firstAttribute="trailing" secondItem="cq7-kw-YMm" secondAttribute="trailing" constant="50" id="XFT-eG-hvW"/>
                             <constraint firstItem="TIk-Ny-aNX" firstAttribute="bottom" secondItem="inj-Hn-h2A" secondAttribute="top" id="XLv-Ze-RLA"/>
-                            <constraint firstItem="uZK-cR-6LQ" firstAttribute="leading" secondItem="fFk-3H-jDf" secondAttribute="trailing" constant="16" id="Yjy-EF-KzV"/>
                             <constraint firstItem="qK6-hJ-9nV" firstAttribute="leading" secondItem="tsW-Di-CC8" secondAttribute="leading" id="YlL-x7-i0X"/>
                             <constraint firstItem="k1R-Ca-CSz" firstAttribute="top" secondItem="k6q-v8-s1t" secondAttribute="bottom" id="Z8W-zc-Mnh"/>
                             <constraint firstAttribute="trailing" secondItem="16i-Nc-XvW" secondAttribute="trailing" constant="50" id="ZAv-43-WNb"/>
@@ -1081,12 +1060,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Fa-vc-hk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3180" y="111.97183098591549"/>
+            <point key="canvasLocation" x="3975" y="111.97183098591549"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="IPf-lw-ymH">
+            <objects>
+                <viewController id="hKE-oP-KNt" customClass="SplashViewController" customModule="CompanyWedding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4SN-mp-6bY"/>
+                        <viewControllerLayoutGuide type="bottom" id="cln-6B-7em"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OR9-f4-h8C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oRv-pa-4Og"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DKa-am-yY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-225" y="111.97183098591549"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qhN-kC-Yd2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fPA-xF-dIR" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginController" automaticallyAdjustsScrollViewInsets="NO" id="fPA-xF-dIR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yQX-la-3Jr">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -1100,7 +1098,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdj-UB-x0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-259" y="114"/>
+            <point key="canvasLocation" x="534.375" y="113.02816901408451"/>
         </scene>
         <!--Left Menu View Controller-->
         <scene sceneID="hLV-bT-TJR">
@@ -1236,7 +1234,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wlk-D5-6dE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2362.5" y="111.97183098591549"/>
+            <point key="canvasLocation" x="3157.5" y="111.97183098591549"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0Hr-3s-njx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qOd-AX-baf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3p9-hY-ThN">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hKE-oP-KNt" kind="relationship" relationship="rootViewController" id="qfe-PE-lXA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="336-Ot-Ac6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-924" y="113"/>
         </scene>
     </scenes>
     <resources>

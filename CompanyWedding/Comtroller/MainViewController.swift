@@ -58,7 +58,7 @@ class MainViewController: BaseViewController, MainStoryboard {
         numberMember.text = Company.shared.numberMember.description
         numberGuest.text = Company.shared.numberGuest.description
         nameCompanyBottom.text = Company.shared.name
-    
+        nameCompany.text = Company.shared.name
     }
     
     @objc func setupNotice() {

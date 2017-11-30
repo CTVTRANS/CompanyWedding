@@ -1,23 +1,21 @@
 //
-//  LoginTask.swift
+//  GetMessageTask.swift
 //  CompanyWedding
 //
-//  Created by le kien on 11/14/17.
+//  Created by le kien on 11/29/17.
 //  Copyright © 2017 le kien. All rights reserved.
 //
 
 import UIKit
-import SwiftyJSON
 
-class LoginTask: LKNetwork {
-    
+class GetMessageTask: LKNetwork {
     var username: String!
-    let key: String!
     var pass: String!
+    let key: String!
     
     init(username: String, password: String) {
         self.username = username
-        self.pass = password
+        pass = password
         let crytor = "id=" + username + "password=" + password + "key=123"
         self.key = crytor.sha1()
     }
@@ -35,13 +33,6 @@ class LoginTask: LKNetwork {
     }
     
     override func dataWithResponse(_ response: Any) -> Any {
-        if let json = response as? JSON {
-            Company.shared = Company.init(json: json)
-            let notice = Notice.getNotice()
-            notice.key = pass
-            notice.accountName = username
-            Notice.saveNotice(noice: notice)
-        }
         return response
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class MessageCell: UITableViewCell {
     
@@ -26,13 +27,18 @@ class MessageCell: UITableViewCell {
             notice.isHidden = false
         }
     }
+    
+    func binNotice(notices: FactotyVoucher) {
+        notice.isHidden = true
+        contentMsg.text = notices.content
+    }
 }
 
 class MessageViewController: BaseViewController {
 
     @IBOutlet weak var table: UITableView!
     var listMessage = [Message]()
-    var listNotice = [Message]()
+    var listNotice = [FactotyVoucher]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +47,24 @@ class MessageViewController: BaseViewController {
         table.dataSource = self
         table.estimatedRowHeight = 140
         table.tableFooterView = UIView()
-        var message = Message()
-        message.content = "324"
-        message.isReaded = false
-        listMessage.append(message)
+        getMessage()
     }
-
+    
+    func getMessage() {
+        let notice = Notice.getNotice()
+        let getMessage = GetMessageTask(username: notice.accountName, password: notice.key)
+        requestWith(task: getMessage) { (data) in
+            if let json = data as? JSON {
+                if let arrayNotice = json["Vouchers"].array {
+                    for json in arrayNotice {
+                        let message = FactotyVoucher(json: json)
+                        self.listNotice.append(message)
+                    }
+                }
+                self.table.reloadData()
+            }
+        }
+    }
 }
 
 extension MessageViewController: UITableViewDelegate, UITableViewDataSource {
@@ -68,7 +86,7 @@ extension MessageViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 0 {
             cell?.binData(message: listMessage[indexPath.row])
         } else {
-            cell?.binData(message: listNotice[indexPath.row])
+            cell?.binNotice(notices: listNotice[indexPath.row])
         }
         return cell!
     }

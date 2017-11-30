@@ -23,6 +23,9 @@ class LoginController: BaseViewController, MainStoryboard {
         if let username = userName.text, let pass = password.text {
             let login = LoginTask(username: username, password: pass)
             requestWith(task: login, success: { (_) in
+                let notice = Notice.getNotice()
+                notice.accountName = username
+                notice.key = pass
                 if let vc = self.storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController") as? SWRevealViewController {
                     self.present(vc, animated: false, completion: nil)
                 }
