@@ -74,13 +74,14 @@ class LKNetwork: NSObject {
         }
         let url = baseURL + path()
         let params = getParams(params: parameters())
-        request?.httpMethod = method().rawValue
+       
         if method() == .POST {
             request = URLRequest(url: URL(string: url)!)
             request?.httpBody = params.data(using: .utf8)
         } else {
             request = URLRequest(url: URL(string: url + params)!)
         }
+        request?.httpMethod = method().rawValue
         request?.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request?.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Accept")
         setUpTimeOut()

@@ -60,13 +60,14 @@ extension UITextView {
                 let currentFont = self.font
                 var sizeScale: CGFloat = 1
                 let device = Device()
-                if device == .simulator(.iPhone7) || device == .simulator(.iPhone6) || device == .iPhone6
-                    || device == .iPhone6s || device == .iPhone7 || device == .simulator(.iPhone8)
-                    || device == .iPhone8 {
+                if device == .simulator(.iPhone7) || device == .simulator(.iPhone6)
+                    || device == .iPhone6 || device == .iPhone6s || device == .iPhone7
+                    || device == .simulator(.iPhone8) || device == .iPhone8 {
                     sizeScale = 1.2
                 } else if device == .simulator(.iPhone6Plus) || device == .simulator(.iPhone7Plus)
-                    || device == .iPhone6Plus || device == .iPhone7Plus || device == .simulator(.iPhone8Plus)
-                    || device == .iPhone8Plus {
+                    || device == .iPhone6Plus || device == .iPhone7Plus
+                    || device == .simulator(.iPhone8Plus) || device == .iPhone8Plus
+                    || device == .iPhone6sPlus {
                     sizeScale = 1.3
                 }
                 self.font = currentFont?.withSize((currentFont?.pointSize)! * sizeScale)
@@ -86,13 +87,14 @@ extension UILabel {
                 let currentFont = self.font
                 var sizeScale: CGFloat = 1
                 let device = Device()
-                if device == .simulator(.iPhone7) || device == .simulator(.iPhone6) || device == .iPhone6
-                    || device == .iPhone6s || device == .iPhone7 || device == .simulator(.iPhone8)
-                    || device == .iPhone8 {
+                if device == .simulator(.iPhone7) || device == .simulator(.iPhone6)
+                    || device == .iPhone6 || device == .iPhone6s || device == .iPhone7
+                    || device == .simulator(.iPhone8) || device == .iPhone8 {
                     sizeScale = 1.2
                 } else if device == .simulator(.iPhone6Plus) || device == .simulator(.iPhone7Plus)
-                    || device == .iPhone6Plus || device == .iPhone7Plus || device == .simulator(.iPhone8Plus)
-                    || device == .iPhone8Plus {
+                    || device == .iPhone6Plus || device == .iPhone7Plus
+                    || device == .simulator(.iPhone8Plus) || device == .iPhone8Plus
+                    || device == .iPhone6sPlus {
                     sizeScale = 1.3
                 }
                 self.font = currentFont?.withSize((currentFont?.pointSize)! * sizeScale)
@@ -112,13 +114,14 @@ extension UITextField {
                 let currentFont = self.font
                 var sizeScale: CGFloat = 1
                 let device = Device()
-                if device == .simulator(.iPhone7) || device == .simulator(.iPhone6) || device == .iPhone6
-                    || device == .iPhone6s || device == .iPhone7 || device == .simulator(.iPhone8)
-                    || device == .iPhone8 {
+                if device == .simulator(.iPhone7) || device == .simulator(.iPhone6)
+                    || device == .iPhone6 || device == .iPhone6s || device == .iPhone7
+                    || device == .simulator(.iPhone8) || device == .iPhone8 {
                     sizeScale = 1.2
                 } else if device == .simulator(.iPhone6Plus) || device == .simulator(.iPhone7Plus)
-                    || device == .iPhone6Plus || device == .iPhone7Plus || device == .simulator(.iPhone8Plus)
-                    || device == .iPhone8Plus {
+                    || device == .iPhone6Plus || device == .iPhone7Plus
+                    || device == .simulator(.iPhone8Plus) || device == .iPhone8Plus
+                    || device == .iPhone6sPlus {
                     sizeScale = 1.3
                 }
                 self.font = currentFont?.withSize((currentFont?.pointSize)! * sizeScale)
@@ -138,13 +141,14 @@ extension NSLayoutConstraint {
                 let currentConstant = self.constant
                 var sizeScale: CGFloat = 1
                 let device = Device()
-                if device == .simulator(.iPhone7) || device == .simulator(.iPhone6) || device == .iPhone6
-                    || device == .iPhone6s || device == .iPhone7 || device == .simulator(.iPhone8)
-                    || device == .iPhone8 {
+                if device == .simulator(.iPhone7) || device == .simulator(.iPhone6)
+                    || device == .iPhone6 || device == .iPhone6s || device == .iPhone7
+                    || device == .simulator(.iPhone8) || device == .iPhone8 {
                     sizeScale = 1.2
                 } else if device == .simulator(.iPhone6Plus) || device == .simulator(.iPhone7Plus)
-                    || device == .iPhone6Plus || device == .iPhone7Plus || device == .simulator(.iPhone8Plus)
-                    || device == .iPhone8Plus {
+                    || device == .iPhone6Plus || device == .iPhone7Plus
+                    || device == .simulator(.iPhone8Plus) || device == .iPhone8Plus
+                    || device == .iPhone6sPlus {
                     sizeScale = 1.3
                 }
                 self.constant = currentConstant * sizeScale
@@ -163,23 +167,17 @@ extension UIButton {
             if newValue {
                 let currentFont = self.titleLabel?.font
                 var sizeScale: CGFloat = 1
-                //                let model = UIDevice.current.model
                 let device = Device()
-                if device == .simulator(.iPhone7) || device == .simulator(.iPhone6)  || device == .iPhone6s
-                    || device == .iPhone6 || device == .iPhone7 || device == .simulator(.iPhone8)
-                    || device == .iPhone8 {
+                if device == .simulator(.iPhone7) || device == .simulator(.iPhone6)
+                    || device == .iPhone6s || device == .iPhone6 || device == .iPhone7
+                    || device == .simulator(.iPhone8) || device == .iPhone8 {
                     sizeScale = 1.2
                 } else if device == .simulator(.iPhone6Plus) || device == .simulator(.iPhone7Plus)
-                    || device == .iPhone6Plus || device == .iPhone7Plus || device == .simulator(.iPhone8Plus)
-                    || device == .iPhone8Plus {
+                    || device == .iPhone6Plus || device == .iPhone7Plus
+                    || device == .simulator(.iPhone8Plus) || device == .iPhone8Plus
+                    || device == .iPhone6sPlus {
                     sizeScale = 1.3
                 }
-                //                if model == "iPhone 6" {
-                //                    sizeScale = 1.3
-                //                }
-                //                else if model == "iPhone 6 Plus" {
-                //                    sizeScale = 1.5
-                //                }
                 self.titleLabel?.font = currentFont?.withSize((currentFont?.pointSize)! * sizeScale)
             }
         }

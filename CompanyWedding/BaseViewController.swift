@@ -40,6 +40,7 @@ class BaseViewController: UIViewController {
             success(data)
         }) { (error) in
             debugPrint(error)
+            self.stopActivityIndicator()
             UIAlertController.showAlertWith(title: "", message: error, in: self)
         }
     }
@@ -50,36 +51,49 @@ class BaseViewController: UIViewController {
             swVC?.pushFrontViewController(navigationVC, animated: true)
         }
     }
+    
     func shared() {
         let textShare = "hello hello"
         let linkShare = "https://www.google.com.vn"
-        let shareObject = [textShare, linkShare] as? [Any]
-        let activity = UIActivityViewController(activityItems: shareObject!, applicationActivities: nil)
+        let shareObject = [textShare, linkShare]
+        let activity = UIActivityViewController(activityItems: shareObject, applicationActivities: nil)
         self.present(activity, animated: true, completion: nil)
     }
     
     func openManagerCompany() {
-        UIApplication.shared.openURL(URL(string: baseURL + manager)!)
+        if let url = URL(string: baseURL + manager) {
+            UIApplication.shared.openURL(url)
+        }
     }
     
     func openListMember() {
-        UIApplication.shared.openURL(URL(string: baseURL + listMemberOnline)!)
+        if let url = URL(string: baseURL + listMemberOnline) {
+              UIApplication.shared.openURL(url)
+        }
     }
     
     func openMemberUpload() {
-        UIApplication.shared.openURL(URL(string: baseURL + seatMemberUpload)!)
+        if let url = URL(string: baseURL + seatMemberUpload) {
+            UIApplication.shared.openURL(url)
+        }
     }
     
     func openSeat() {
-        UIApplication.shared.openURL(URL(string: baseURL + seatLink)!)
+        if let url = URL(string: baseURL + seatLink) {
+            UIApplication.shared.openURL(url)
+        }
     }
     
     func openQA() {
-        UIApplication.shared.openURL(URL(string: baseURL + questionURL)!)
+        if let url = URL(string: baseURL + questionURL) {
+            UIApplication.shared.openURL(url)
+        }
     }
     
     func openCompanyInfo() {
-        UIApplication.shared.openURL(URL(string: baseURL + companyInfo)!)
+        if let url = URL(string: baseURL + companyInfo) {
+            UIApplication.shared.openURL(url)
+        }
     }
     
     func showActivity(inView myView: UIView) {

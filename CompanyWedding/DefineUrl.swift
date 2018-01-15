@@ -18,6 +18,9 @@ let seatMemberUpload = "/app/fac.aspx?ACT=admin&ACCT=freewed#WedStepDoc"
 let listMemberOnline = "/app/fac.aspx?ACCT=freewed"
 let manager = "/app/fac.aspx?ACT=admin&ACCT=freewed"
 let questionURL = "/app/fac.aspx?ACCT=freewed"
+let getNumberNotice = "/api/GetFactoryMessageCounts.aspx?"
+let updateCountNotice = "/api/UpdateGuestMessageCountsStatus.aspx?"
+let getFactoryMessage = "/api/GetFactoryMessage.aspx?"
 
 let widthScreen = UIScreen.main.bounds.width
 let heihtSceen = UIScreen.main.bounds.height

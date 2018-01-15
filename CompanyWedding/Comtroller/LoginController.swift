@@ -21,11 +21,13 @@ class LoginController: BaseViewController, MainStoryboard {
 
     @IBAction func pressedLogin(_ sender: Any) {
         if let username = userName.text, let pass = password.text {
-            let login = LoginTask(username: username, password: pass)
+            let crytor = "username=\(username)&password=\(pass)&key=free123"
+            let key = crytor.sha1()
+            let login = LoginTask(username: username, key: key)
             requestWith(task: login, success: { (_) in
-                let notice = Notice.getNotice()
-                notice.accountName = username
-                notice.key = pass
+                let cacheCompany = Cache<Company>()
+                Company.shared.key = key
+                cacheCompany.save(object: Company.shared)
                 if let vc = self.storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController") as? SWRevealViewController {
                     self.present(vc, animated: false, completion: nil)
                 }

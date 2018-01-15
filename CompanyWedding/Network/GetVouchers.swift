@@ -1,15 +1,15 @@
 //
-//  GetMessageTask.swift
+//  GetVouchers.swift
 //  CompanyWedding
 //
-//  Created by le kien on 11/29/17.
-//  Copyright © 2017 le kien. All rights reserved.
+//  Created by le kien on 1/15/18.
+//  Copyright © 2018 le kien. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import SwiftyJSON
 
-class GetMessageTask: LKNetwork {
+class GetVouchers: LKNetwork {
     var username: String!
     let key: String!
     
@@ -19,7 +19,7 @@ class GetMessageTask: LKNetwork {
     }
     
     override func path() -> String {
-        return getFactoryMessage
+        return loginURL
     }
     
     override func parameters() -> [String: Any] {
@@ -31,15 +31,15 @@ class GetMessageTask: LKNetwork {
     }
     
     override func dataWithResponse(_ response: Any) -> Any {
-        var listMessage = [MessageLog]()
-        if let jsons = response as? [JSON] {
-            for json in jsons {
-                let message = MessageLog.decodeJson(json: json)
-                if message.owner == "W1" || message.owner == "W3" {
-                    listMessage.append(message)
+        var listVoucher = [FactotyVoucher]()
+        if let jsons = response as? JSON {
+            if let arrayNotice = jsons["Vouchers"].array {
+                for json in arrayNotice {
+                    let notice = FactotyVoucher(json: json)
+                    listVoucher.append(notice)
                 }
             }
         }
-        return listMessage
+        return listVoucher
     }
 }

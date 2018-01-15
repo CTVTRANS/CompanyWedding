@@ -13,13 +13,10 @@ class LoginTask: LKNetwork {
     
     var username: String!
     let key: String!
-    var pass: String!
     
-    init(username: String, password: String) {
+    init(username: String, key: String) {
         self.username = username
-        self.pass = password
-        let crytor = "id=" + username + "password=" + password + "key=123"
-        self.key = crytor.sha1()
+        self.key = key
     }
     
     override func path() -> String {
@@ -27,7 +24,7 @@ class LoginTask: LKNetwork {
     }
     
     override func parameters() -> [String: Any] {
-        return ["id": username, "k": "ce97e1dce2857e6dff98d61c0e49b23d5cabc2d6"]
+        return ["id": username, "k": key]
     }
     
     override func method() -> HTTPMethod {
@@ -36,11 +33,8 @@ class LoginTask: LKNetwork {
     
     override func dataWithResponse(_ response: Any) -> Any {
         if let json = response as? JSON {
-            Company.shared = Company.init(json: json)
-            let notice = Notice.getNotice()
-            notice.key = pass
-            notice.accountName = username
-            Notice.saveNotice(noice: notice)
+            Company.shared = Company.decodeJson(json: json)
+            return response
         }
         return response
     }

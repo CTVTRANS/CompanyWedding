@@ -14,20 +14,15 @@ class SplashViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let notice = Notice.getNotice()
-        if notice.accountName != "" {
-            let login = LoginTask(username: notice.accountName, password: notice.key)
-            requestWith(task: login, success: { (_) in
-                if let vc = self.storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController") as? SWRevealViewController {
-                    self.present(vc, animated: false, completion: nil)
-                }
-            })
+        let cacheCompany = Cache<Company>()
+        if let company = cacheCompany.fetchObject(), company.account != "", company.key != "" {
+            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController") as? SWRevealViewController {
+                self.present(vc, animated: false, completion: nil)
+            }
         } else {
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginController") as? UINavigationController {
-//                navigationController?.pushViewController(vc, animated: false)
                 self.present(vc, animated: false, completion: nil)
             }
         }
     }
-
 }
